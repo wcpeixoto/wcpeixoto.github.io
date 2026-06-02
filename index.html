@@ -408,6 +408,78 @@
     .hours-row { grid-template-columns: 1fr; }
   }
 
+  /* ── Practical info block ─────────────────────────────────── */
+  .info-block {
+    padding-block: clamp(8px, 2vw, 16px) clamp(40px, 6vw, 64px);
+  }
+  .info-head { text-align: center; margin-bottom: 28px; }
+  .info-head .hand-tag {
+    font-family: var(--f-hand);
+    font-size: 24px; color: var(--pink);
+    transform: rotate(-3deg); display: inline-block;
+  }
+  .info-head h2 {
+    margin: 2px 0 0;
+    font-family: var(--f-display); font-weight: 500;
+    font-size: clamp(28px, 4vw, 40px); line-height: 1.05;
+    color: var(--ink); letter-spacing: -0.018em;
+  }
+  .info-head h2 em { font-style: italic; color: var(--pink); font-weight: 500; }
+  .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 560px) { .info-grid { grid-template-columns: 1fr; } }
+  .info-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 24px 24px 22px;
+    display: flex; flex-direction: column;
+  }
+  .ic-lbl {
+    font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--mustard-deep); font-weight: 700; margin-bottom: 16px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .ic-lbl svg { width: 15px; height: 15px; flex: none; }
+  .wifi-nets { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+  .wifi-nets span {
+    font-weight: 600; font-size: 13.5px; color: var(--ink);
+    background: var(--leaf-pale);
+    border: 1px solid var(--leaf-soft);
+    border-radius: 999px; padding: 6px 14px;
+  }
+  .wifi-pass {
+    margin-top: auto;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    background: var(--cream); border: 1px dashed var(--line);
+    border-radius: 12px; padding: 12px 14px;
+  }
+  .pass-lbl {
+    font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--muted); font-weight: 700; margin-bottom: 3px;
+  }
+  .pass-val {
+    font-family: var(--f-display); font-style: italic; font-weight: 600;
+    font-size: 24px; color: var(--ink); line-height: 1; letter-spacing: -0.01em;
+  }
+  .copy-btn {
+    flex: none;
+    background: var(--ink); color: var(--cream);
+    border-radius: 999px; padding: 9px 16px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    transition: background .2s;
+  }
+  .copy-btn:hover { background: var(--pink); }
+  .copy-btn.done { background: var(--leaf); }
+  .addr-text { margin: 0 0 16px; font-size: 16px; line-height: 1.6; color: var(--ink-soft); }
+  .addr-text strong { color: var(--ink); font-weight: 700; }
+  .map-link {
+    margin-top: auto; align-self: flex-start;
+    font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--pink); border-bottom: 1px solid var(--pink-soft);
+    padding-bottom: 2px; transition: color .2s, border-color .2s;
+  }
+  .map-link:hover { color: var(--pink-deep); border-color: var(--pink-deep); }
+
   /* ── Help footer card ─────────────────────────────────────── */
   .help {
     margin-block: clamp(56px, 8vw, 88px) clamp(36px, 5vw, 56px);
@@ -695,8 +767,8 @@
   @media print {
     @page { margin: 14mm 18mm; }
     body { background: var(--cream) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    .top-strip, .actionbar, .install, .modal-overlay, .help-actions, #tweaks { display: none !important; }
-    .help, .intro, .hour-card, .callout, .rule-num, .rule-title em, .help-eyebrow {
+    .top-strip, .actionbar, .install, .modal-overlay, .help-actions, #tweaks, .copy-btn { display: none !important; }
+    .help, .intro, .hour-card, .callout, .rule-num, .rule-title em, .help-eyebrow, .info-card, .wifi-nets span, .wifi-pass {
       -webkit-print-color-adjust: exact !important;
       print-color-adjust: exact !important;
     }
@@ -764,6 +836,41 @@ do <em>703</em></h1>
       Antes de mais nada — fique à vontade, o 703 é seu por toda a estadia. Estas linhas existem só pra cuidar bem do apartamento e dos vizinhos.
     </p>
   </div>
+
+  <!-- Practical info -->
+  <section class="info-block">
+    <div class="info-head">
+      <span class="hand-tag">o essencial</span>
+      <h2>Informações do <em>apartamento</em></h2>
+    </div>
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="ic-lbl">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0114 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+          Wi-Fi · Internet
+        </div>
+        <div class="wifi-nets">
+          <span>BARRA_PART_2.4G</span>
+          <span>BARRA_PART_5.0G</span>
+        </div>
+        <div class="wifi-pass">
+          <div>
+            <div class="pass-lbl">Senha</div>
+            <div class="pass-val" id="wifi-pass">isabela123</div>
+          </div>
+          <button class="copy-btn" id="copy-wifi" type="button">Copiar</button>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="ic-lbl">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Endereço
+        </div>
+        <p class="addr-text"><strong>Av. Lúcio Costa, 6250</strong><br>Ap. 703 — Bloco 01<br>Barra da Tijuca · Rio de Janeiro – RJ<br>CEP 22630-012</p>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Av.%20L%C3%BAcio%20Costa%206250%20Barra%20da%20Tijuca%20Rio%20de%20Janeiro" target="_blank" rel="noopener">Ver no mapa →</a>
+      </div>
+    </div>
+  </section>
 
   <!-- 1. Hóspedes registrados -->
   <section class="rule">
@@ -839,10 +946,30 @@ do <em>703</em></h1>
     </div>
   </section>
 
-  <!-- 6. Ar-condicionado e energia -->
+  <!-- Roupa de cama e toalhas -->
   <section class="rule">
     <div class="rule-head">
       <div class="rule-num">06</div>
+      <h2 class="rule-title">Roupa de cama <em>e toalhas</em></h2>
+    </div>
+    <div class="rule-body">
+      <p>O apartamento já vem com enxoval completo e toalhas limpas para a sua chegada. Para conservar tudo bem cuidado:</p>
+      <ul>
+        <li>As <strong>toalhas de banho</strong> ficam nos banheiros; use as <strong>toalhas de praia/piscina</strong> para a areia e a água — por favor, não leve as de banho para fora</li>
+        <li>Evite usar as toalhas para remover maquiagem, limpar sapatos ou o chão — manchas difíceis podem gerar taxa de reposição</li>
+        <li>Toalhas molhadas: pendure no box ou no varal, nunca sobre a cama ou os móveis</li>
+        <li>Não precisa tirar os lençóis ao sair — pode deixar a roupa de cama na cama</li>
+      </ul>
+      <div class="callout">
+        Estadias de 7 noites ou mais: a troca de enxoval e toalhas pode ser combinada com a gente. É só avisar. 🛏️
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Ar-condicionado e energia -->
+  <section class="rule">
+    <div class="rule-head">
+      <div class="rule-num">07</div>
       <h2 class="rule-title">Ar-condicionado <em>e energia</em></h2>
     </div>
     <div class="rule-body">
@@ -857,7 +984,7 @@ do <em>703</em></h1>
   <!-- 7. Animais de estimação -->
   <section class="rule">
     <div class="rule-head">
-      <div class="rule-num">07</div>
+      <div class="rule-num">08</div>
       <h2 class="rule-title">Animais de <em>estimação</em></h2>
     </div>
     <div class="rule-body">
@@ -868,7 +995,7 @@ do <em>703</em></h1>
   <!-- 8. Danos e manutenção -->
   <section class="rule">
     <div class="rule-head">
-      <div class="rule-num">08</div>
+      <div class="rule-num">09</div>
       <h2 class="rule-title">Danos e <em>manutenção</em></h2>
     </div>
     <div class="rule-body">
@@ -880,7 +1007,7 @@ do <em>703</em></h1>
   <!-- 9. Atividades proibidas -->
   <section class="rule">
     <div class="rule-head">
-      <div class="rule-num">09</div>
+      <div class="rule-num">10</div>
       <h2 class="rule-title">Atividades <em>proibidas</em></h2>
     </div>
     <div class="rule-body">
@@ -897,7 +1024,7 @@ do <em>703</em></h1>
   <!-- 10. Check-in e check-out -->
   <section class="rule">
     <div class="rule-head">
-      <div class="rule-num">10</div>
+      <div class="rule-num">11</div>
       <h2 class="rule-title">Check-in <em>e check-out</em></h2>
     </div>
     <div class="rule-body">
@@ -918,7 +1045,7 @@ do <em>703</em></h1>
   <!-- 11. Fechadura eletrônica -->
   <section class="rule">
     <div class="rule-head">
-      <div class="rule-num">11</div>
+      <div class="rule-num">12</div>
       <h2 class="rule-title">Fechadura <em>eletrônica</em></h2>
     </div>
     <div class="rule-body">
@@ -934,7 +1061,7 @@ do <em>703</em></h1>
   <!-- 12. Antes de sair -->
   <section class="rule">
     <div class="rule-head">
-      <div class="rule-num">12</div>
+      <div class="rule-num">13</div>
       <h2 class="rule-title">Antes <em>de sair</em></h2>
     </div>
     <div class="rule-body">
@@ -949,10 +1076,31 @@ do <em>703</em></h1>
     </div>
   </section>
 
+  <!-- Lixo e reciclagem -->
+  <section class="rule">
+    <div class="rule-head">
+      <div class="rule-num">14</div>
+      <h2 class="rule-title">Lixo <em>e reciclagem</em></h2>
+    </div>
+    <div class="rule-body">
+      <p>Manter o descarte organizado ajuda o condomínio e o meio ambiente. Pedimos só alguns cuidados:</p>
+      <ul>
+        <li>Separe o lixo em <strong>comum/orgânico</strong> e <strong>reciclável</strong> (papel, plástico, vidro e metal limpos)</li>
+        <li>Use os sacos disponíveis na cozinha e feche bem antes de descartar</li>
+        <li>Descarte na área de lixo do andar ou do condomínio, conforme orientação da portaria</li>
+        <li>Não deixe sacolas de lixo na varanda, no corredor ou na porta do apartamento</li>
+        <li>Vidros e garrafas: descarte com cuidado e bem embalados</li>
+      </ul>
+      <div class="callout mustard">
+        Na dúvida sobre onde descartar, a portaria orienta certinho — é só perguntar.
+      </div>
+    </div>
+  </section>
+
   <!-- 13. Áreas comuns -->
   <section class="rule">
     <div class="rule-head">
-      <div class="rule-num">13</div>
+      <div class="rule-num">15</div>
       <h2 class="rule-title">Áreas <em>comuns</em></h2>
     </div>
     <div class="rule-body">
@@ -971,7 +1119,7 @@ do <em>703</em></h1>
   <!-- 14. Respeito aos moradores -->
   <section class="rule">
     <div class="rule-head">
-      <div class="rule-num">14</div>
+      <div class="rule-num">16</div>
       <h2 class="rule-title">Respeito aos <em>moradores</em></h2>
     </div>
     <div class="rule-body">
@@ -1187,6 +1335,25 @@ do <em>703</em></h1>
 
   iosModalClose.onclick = () => iosModal.classList.remove('on');
   iosModal.addEventListener('click', (e) => { if (e.target === iosModal) iosModal.classList.remove('on'); });
+
+  // ── Copy Wi-Fi password
+  const copyBtn = document.getElementById('copy-wifi');
+  if (copyBtn) {
+    copyBtn.onclick = async () => {
+      const pass = document.getElementById('wifi-pass').textContent.trim();
+      try { await navigator.clipboard.writeText(pass); }
+      catch (e) {
+        const r = document.createRange();
+        r.selectNode(document.getElementById('wifi-pass'));
+        const s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        try { document.execCommand('copy'); } catch (_) {}
+        s.removeAllRanges();
+      }
+      copyBtn.textContent = 'Copiado ✓';
+      copyBtn.classList.add('done');
+      setTimeout(() => { copyBtn.textContent = 'Copiar'; copyBtn.classList.remove('done'); }, 1800);
+    };
+  }
 </script>
 
 </body>
