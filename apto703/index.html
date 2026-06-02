@@ -1,0 +1,1193 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Manual do Hóspede · Apto 703</title>
+<meta name="description" content="Regras da casa e tudo o que você precisa saber pra aproveitar sua estadia no Apto 703 — Rio Hotel Residence, Barra da Tijuca." />
+
+<!-- iOS / Android home screen support -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="Apto 703" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="theme-color" content="#f4ecdb" />
+<meta name="mobile-web-app-capable" content="yes" />
+<link rel="apple-touch-icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' rx='40' fill='%23e85c8a'/><text x='90' y='118' font-family='Georgia,serif' font-style='italic' font-size='80' font-weight='600' fill='%23f4ecdb' text-anchor='middle'>703</text></svg>" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23e85c8a'/><text x='16' y='22' font-family='Georgia,serif' font-style='italic' font-size='15' font-weight='600' fill='%23f4ecdb' text-anchor='middle'>703</text></svg>" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&family=Manrope:wght@400;500;600;700&family=Caveat:wght@500;600&family=Italiana&display=swap" rel="stylesheet">
+
+<template id="__bundler_thumbnail" data-bg-color="#f4ecdb">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#f4ecdb"/>
+    <circle cx="600" cy="400" r="180" fill="#e85c8a"/>
+    <text x="600" y="460" font-family="Georgia, serif" font-style="italic" font-weight="600" font-size="180" fill="#f4ecdb" text-anchor="middle">703</text>
+    <text x="600" y="640" font-family="Georgia, serif" font-weight="500" font-size="42" fill="#2c5e3f" text-anchor="middle" letter-spacing="6">MANUAL DO HÓSPEDE</text>
+  </svg>
+</template>
+
+<style>
+  :root {
+    --cream: #f4ecdb;
+    --cream-deep: #ebe1cb;
+    --paper: #fbf6ea;
+    --pink: #e85c8a;
+    --pink-deep: #c4426d;
+    --pink-soft: #f8cfd9;
+    --pink-blush: #fae6ec;
+    --leaf: #2c5e3f;
+    --leaf-soft: #cfd9bd;
+    --leaf-pale: #e8edd9;
+    --mustard: #d99a2b;
+    --mustard-soft: #f4dba1;
+    --mustard-deep: #b87d18;
+    --ink: #2a1a14;
+    --ink-soft: #4f3a2d;
+    --muted: #8a7763;
+    --line: rgba(42, 26, 20, 0.12);
+
+    --f-display: 'Newsreader', 'Times New Roman', serif;
+    --f-deco: 'Italiana', serif;
+    --f-body: 'Manrope', system-ui, sans-serif;
+    --f-hand: 'Caveat', cursive;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--f-body);
+    color: var(--ink);
+    background: var(--cream);
+    font-weight: 400;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    padding-top: env(safe-area-inset-top);
+  }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding-inline: clamp(20px, 5vw, 56px);
+  }
+
+  /* ── Top strip & action bar ───────────────────────────────── */
+  .top-strip {
+    background: var(--leaf);
+    color: var(--cream);
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    font-weight: 500;
+  }
+  .top-strip .sep { margin: 0 16px; color: var(--mustard-soft); }
+
+  .actionbar {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(244, 236, 219, 0.92);
+    backdrop-filter: blur(20px) saturate(1.4);
+    -webkit-backdrop-filter: blur(20px) saturate(1.4);
+    border-bottom: 1px solid var(--line);
+  }
+  .actionbar-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-block: 14px;
+    gap: 16px;
+  }
+  .crumb {
+    display: flex; align-items: center; gap: 12px;
+    color: var(--ink);
+  }
+  .crumb-mark {
+    width: 40px; height: 40px;
+    background: var(--pink);
+    color: var(--cream);
+    display: grid; place-items: center;
+    font-family: var(--f-display);
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 50%;
+    flex: none;
+  }
+  .crumb-text { line-height: 1.15; }
+  .crumb-text .l1 {
+    display: block;
+    font-family: var(--f-display);
+    font-style: italic;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--ink);
+  }
+  .crumb-text .l2 {
+    display: block;
+    font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 700;
+    margin-top: 2px;
+  }
+  .ab-actions { display: flex; gap: 8px; }
+  .btn-icon {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    color: var(--ink-soft);
+    display: grid; place-items: center;
+    transition: background .2s, color .2s, border-color .2s;
+  }
+  .btn-icon:hover { background: var(--pink); border-color: var(--pink); color: white; }
+  .btn-icon svg { width: 18px; height: 18px; }
+  .btn-print {
+    background: var(--ink);
+    color: var(--cream);
+    border-color: var(--ink);
+    border-radius: 999px;
+    width: auto;
+    padding: 0 18px;
+    height: 40px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .btn-print:hover { background: var(--leaf); border-color: var(--leaf); color: var(--cream); }
+  @media (max-width: 520px) {
+    .btn-print .lbl { display: none; }
+    .btn-print { width: 40px; padding: 0; justify-content: center; }
+  }
+
+  /* ── Cover ────────────────────────────────────────────────── */
+  .cover {
+    padding-block: clamp(56px, 9vw, 100px) clamp(40px, 6vw, 64px);
+    text-align: center;
+    position: relative;
+  }
+  .cover .eyebrow {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-size: 11px;
+    color: var(--leaf);
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .cover .eyebrow .dash {
+    display: inline-block;
+    width: 22px; height: 1px;
+    background: var(--leaf);
+  }
+  .cover h1 {
+    margin: 0;
+    font-family: var(--f-display);
+    font-weight: 500;
+    font-size: clamp(48px, 8vw, 92px);
+    line-height: 0.95;
+    letter-spacing: -0.022em;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+  .cover h1 em {
+    font-style: italic;
+    color: var(--pink);
+    font-weight: 500;
+  }
+  .cover h1 .script {
+    font-family: var(--f-hand);
+    color: var(--mustard-deep);
+    font-style: normal;
+    font-weight: 600;
+    display: inline-block;
+    transform: rotate(-3deg);
+  }
+  .cover-sub {
+    margin: 28px auto 0;
+    font-size: clamp(16px, 1.2vw, 18px);
+    line-height: 1.7;
+    color: var(--ink-soft);
+    max-width: 48ch;
+  }
+  .cover-meta {
+    margin-top: 28px;
+    display: inline-flex; align-items: center; gap: 14px;
+    font-family: var(--f-display);
+    font-style: italic;
+    font-size: 16px;
+    color: var(--muted);
+  }
+  .cover-meta .dot { color: var(--pink); }
+
+  .cover-orn {
+    margin-top: 36px;
+    display: flex; justify-content: center;
+  }
+  .cover-orn svg { width: 80px; height: 28px; color: var(--mustard); opacity: 0.7; }
+
+  /* ── Intro card ───────────────────────────────────────────── */
+  .intro {
+    padding: 32px clamp(24px, 4vw, 40px);
+    background: var(--pink-blush);
+    border: 1px solid rgba(232, 92, 138, 0.18);
+    border-radius: 16px;
+    margin-bottom: clamp(48px, 7vw, 80px);
+    text-align: center;
+    position: relative;
+  }
+  .intro .hand-tag {
+    font-family: var(--f-hand);
+    font-size: 24px;
+    color: var(--pink);
+    transform: rotate(-3deg);
+    display: inline-block;
+    margin-bottom: 4px;
+  }
+  .intro p {
+    margin: 0;
+    font-family: var(--f-display);
+    font-style: italic;
+    font-size: clamp(18px, 1.6vw, 22px);
+    line-height: 1.55;
+    color: var(--ink);
+    font-weight: 400;
+    max-width: 50ch;
+    margin-inline: auto;
+  }
+
+  /* ── Sections ─────────────────────────────────────────────── */
+  section.rule {
+    padding-block: clamp(40px, 5vw, 64px);
+    border-top: 1px solid var(--line);
+    break-inside: avoid;
+  }
+  section.rule:first-of-type { border-top: none; padding-top: 0; }
+
+  .rule-head {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 24px;
+    align-items: baseline;
+    margin-bottom: 20px;
+  }
+  .rule-num {
+    font-family: var(--f-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(48px, 7vw, 80px);
+    line-height: 0.85;
+    color: var(--pink);
+    letter-spacing: -0.04em;
+  }
+  .rule-title {
+    font-family: var(--f-display);
+    font-weight: 500;
+    font-size: clamp(28px, 3.6vw, 40px);
+    line-height: 1.05;
+    margin: 0;
+    color: var(--ink);
+    letter-spacing: -0.018em;
+    text-wrap: balance;
+    padding-top: 4px;
+  }
+  .rule-title em {
+    font-style: italic;
+    color: var(--pink);
+    font-weight: 500;
+  }
+  .rule-body {
+    padding-left: clamp(0px, 8vw, 96px);
+  }
+  .rule-body p {
+    margin: 0 0 14px;
+    font-size: 16.5px;
+    line-height: 1.75;
+    color: var(--ink-soft);
+  }
+  .rule-body p:last-child { margin-bottom: 0; }
+  .rule-body strong {
+    color: var(--ink);
+    font-weight: 700;
+  }
+  .rule-body em {
+    font-style: italic;
+    color: var(--leaf);
+    font-weight: 500;
+  }
+  .rule-body ul {
+    list-style: none;
+    padding: 0;
+    margin: 14px 0;
+    display: grid;
+    gap: 10px;
+  }
+  .rule-body li {
+    position: relative;
+    padding-left: 22px;
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+  }
+  .rule-body li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 12px;
+    width: 8px; height: 8px;
+    background: var(--mustard);
+    border-radius: 50%;
+  }
+
+  /* Callout — bold statement */
+  .callout {
+    margin: 18px 0;
+    padding: 18px 22px;
+    background: var(--leaf-pale);
+    border-left: 3px solid var(--leaf);
+    border-radius: 6px;
+    font-family: var(--f-display);
+    font-style: italic;
+    font-size: clamp(17px, 1.4vw, 19px);
+    line-height: 1.4;
+    color: var(--leaf);
+    font-weight: 500;
+  }
+  .callout.pink {
+    background: var(--pink-blush);
+    border-left-color: var(--pink);
+    color: var(--pink-deep);
+  }
+  .callout.mustard {
+    background: var(--mustard-soft);
+    border-left-color: var(--mustard-deep);
+    color: var(--mustard-deep);
+  }
+
+  .hours-row {
+    margin: 18px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .hour-card {
+    padding: 20px 22px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+  }
+  .hour-card .lbl {
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--mustard-deep);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .hour-card .val {
+    font-family: var(--f-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+  }
+  .hour-card .val small {
+    font-family: var(--f-body);
+    font-style: normal;
+    font-size: 13px;
+    color: var(--muted);
+    margin-left: 6px;
+    font-weight: 500;
+  }
+  @media (max-width: 460px) {
+    .hours-row { grid-template-columns: 1fr; }
+  }
+
+  /* ── Help footer card ─────────────────────────────────────── */
+  .help {
+    margin-block: clamp(56px, 8vw, 88px) clamp(36px, 5vw, 56px);
+    padding: clamp(28px, 4vw, 40px);
+    background: var(--leaf);
+    color: var(--cream);
+    border-radius: 18px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .help::before {
+    content: "";
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 140px; height: 140px;
+    background: var(--mustard);
+    border-radius: 50%;
+    opacity: 0.2;
+  }
+  .help-eyebrow {
+    font-family: var(--f-hand);
+    font-size: 26px;
+    color: var(--mustard);
+    transform: rotate(-2deg);
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+  .help h2 {
+    font-family: var(--f-display);
+    font-weight: 500;
+    font-size: clamp(28px, 4vw, 38px);
+    line-height: 1.1;
+    margin: 0 0 16px;
+    color: var(--cream);
+    letter-spacing: -0.018em;
+  }
+  .help h2 em {
+    font-style: italic;
+    color: var(--mustard-soft);
+    font-weight: 500;
+  }
+  .help p {
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.65;
+    color: rgba(244, 236, 219, 0.85);
+    max-width: 44ch;
+  }
+  .help-actions {
+    margin-top: 28px;
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;
+    position: relative;
+    z-index: 2;
+  }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 14px 24px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    border-radius: 999px;
+    transition: transform .15s, background .2s, color .2s;
+    white-space: nowrap;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn.wa { background: #25D366; color: white; }
+  .btn.wa:hover { background: #1da851; }
+  .btn.cream-outline {
+    background: transparent;
+    color: var(--cream);
+    border: 1.5px solid var(--cream);
+  }
+  .btn.cream-outline:hover { background: var(--cream); color: var(--leaf); }
+  .btn svg { width: 14px; height: 14px; }
+  .help-final {
+    margin-top: 22px;
+    font-family: var(--f-display);
+    font-style: italic;
+    font-size: 16px;
+    color: var(--mustard-soft);
+  }
+
+  /* ── Footer ───────────────────────────────────────────────── */
+  footer.foot {
+    padding-block: 32px 56px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+  footer.foot .heart { color: var(--pink); }
+  footer.foot a { color: var(--ink-soft); border-bottom: 1px solid var(--line); }
+  footer.foot a:hover { color: var(--pink); border-color: var(--pink); }
+
+  /* ── Install prompt (mobile bookmark) ─────────────────────── */
+  .install {
+    position: fixed;
+    left: 16px; right: 16px;
+    bottom: 16px;
+    bottom: max(16px, env(safe-area-inset-bottom));
+    background: var(--ink);
+    color: var(--cream);
+    border-radius: 16px;
+    padding: 14px 16px;
+    display: none;
+    align-items: center;
+    gap: 14px;
+    z-index: 60;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+    animation: slide-in .3s ease-out;
+  }
+  .install.on { display: flex; }
+  @keyframes slide-in {
+    from { transform: translateY(120%); }
+    to { transform: translateY(0); }
+  }
+  .install-ic {
+    width: 40px; height: 40px;
+    background: var(--pink);
+    color: var(--cream);
+    border-radius: 50%;
+    display: grid; place-items: center;
+    font-family: var(--f-display);
+    font-style: italic;
+    font-weight: 600;
+    flex: none;
+    font-size: 13px;
+  }
+  .install-text { flex: 1; line-height: 1.3; }
+  .install-text .t1 {
+    font-family: var(--f-display);
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--cream);
+  }
+  .install-text .t2 {
+    font-size: 11px;
+    color: rgba(244, 236, 219, 0.65);
+    margin-top: 2px;
+  }
+  .install-close {
+    width: 32px; height: 32px;
+    color: rgba(244, 236, 219, 0.6);
+    font-size: 22px;
+    line-height: 1;
+  }
+
+  /* ── Modal overlay (for share-on-iOS instructions) ─────── */
+  .modal-overlay {
+    position: fixed; inset: 0;
+    background: rgba(42, 26, 20, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 100;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .modal-overlay.on { display: flex; }
+  .modal {
+    background: var(--cream);
+    border-radius: 20px;
+    padding: 32px 28px;
+    max-width: 380px;
+    width: 100%;
+    text-align: center;
+    animation: pop .25s ease-out;
+  }
+  @keyframes pop {
+    from { transform: scale(0.92); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  .modal h3 {
+    font-family: var(--f-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 26px;
+    margin: 0 0 8px;
+    color: var(--ink);
+    letter-spacing: -0.015em;
+  }
+  .modal p {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    margin: 0 0 16px;
+  }
+  .modal .steps {
+    text-align: left;
+    margin: 18px 0;
+    display: grid;
+    gap: 14px;
+  }
+  .modal .step {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 12px;
+    align-items: start;
+    font-size: 14px;
+    color: var(--ink);
+  }
+  .modal .step b {
+    font-family: var(--f-display);
+    font-style: italic;
+    font-weight: 600;
+    color: var(--pink);
+    font-size: 18px;
+    line-height: 1;
+  }
+  .modal .share-glyph {
+    display: inline-flex;
+    width: 22px; height: 22px;
+    vertical-align: -5px;
+    margin: 0 2px;
+    color: var(--leaf);
+  }
+  .modal-close {
+    margin-top: 8px;
+    background: var(--ink);
+    color: var(--cream);
+    padding: 12px 24px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .modal-close:hover { background: var(--leaf); }
+
+  /* ── Tweaks panel ───────────────────────────────────────── */
+  #tweaks {
+    position: fixed; right: 24px; bottom: 24px;
+    width: 300px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    color: var(--ink);
+    font-family: var(--f-body);
+    font-size: 13px;
+    z-index: 100;
+    display: none;
+    box-shadow: 0 20px 60px rgba(42, 26, 20, 0.2);
+  }
+  #tweaks.on { display: block; }
+  .tw-head {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--line);
+  }
+  .tw-head .ttl {
+    font-family: var(--f-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 22px;
+    color: var(--ink);
+  }
+  .tw-head button { color: var(--ink-soft); font-size: 22px; padding: 0 4px; line-height: 1; }
+  .tw-body { padding: 18px; display: grid; gap: 18px; }
+  .tw-sec .lbl {
+    font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  .palettes { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .pal-opt {
+    border: 1.5px solid var(--line);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+    transition: border-color .2s;
+    background: var(--paper);
+  }
+  .pal-opt.active { border-color: var(--pink); }
+  .pal-opt:hover { border-color: var(--leaf); }
+  .pal-opt .nm { font-size: 12px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+  .pal-opt .sw { display: flex; gap: 4px; }
+  .pal-opt .sw span { width: 18px; height: 18px; border-radius: 4px; border: 1px solid rgba(0,0,0,0.05); }
+
+  /* ── Print ────────────────────────────────────────────────── */
+  @media print {
+    @page { margin: 14mm 18mm; }
+    body { background: var(--cream) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .top-strip, .actionbar, .install, .modal-overlay, .help-actions, #tweaks { display: none !important; }
+    .help, .intro, .hour-card, .callout, .rule-num, .rule-title em, .help-eyebrow {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    .cover { padding-block: 24px 32px !important; break-after: avoid; }
+    section.rule { break-inside: avoid; }
+    .help { break-inside: avoid; }
+    .wrap { max-width: none; padding-inline: 0; }
+    a { color: inherit; }
+  }
+</style>
+</head>
+<body style="background-color: rgb(251, 245, 233)">
+
+<!-- Top strip -->
+<div class="top-strip">
+  ✦ Manual do Hóspede <span class="sep">·</span> Apto 703 <span class="sep">·</span> Rio Hotel Residence ✦
+</div>
+
+<!-- Action bar -->
+<div class="actionbar">
+  <div class="wrap actionbar-inner">
+    <a href="#top" class="crumb">
+      <div class="crumb-mark">703</div>
+      <div class="crumb-text">
+        <span class="l1">Manual do hóspede</span>
+        <span class="l2">Apto 703</span>
+      </div>
+    </a>
+    <div class="ab-actions">
+      <button class="btn-icon" id="bookmark-btn" title="Salvar na tela inicial" aria-label="Salvar na tela inicial">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>
+      </button>
+      <button class="btn-print" id="print-btn" title="Salvar como PDF" aria-label="Salvar como PDF">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2M6 14h12v8H6z"/></svg>
+        <span class="lbl">PDF</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<main class="wrap" id="top">
+
+  <!-- Cover -->
+  <header class="cover">
+    <span class="eyebrow"><span class="dash"></span>Manual do hóspede<span class="dash"></span></span>
+    <h1>Regras
+do <em>703</em></h1>
+    <p class="cover-sub">
+      Queremos que você aproveite muito sua estadia. As regras abaixo existem para manter o apartamento bem cuidado, respeitar o condomínio e garantir uma boa experiência <em style="font-style:italic; color:var(--pink); font-weight:500;">para todos</em>.
+    </p>
+    <div class="cover-orn">
+      <svg viewBox="0 0 80 28" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+        <path d="M2 14 H30"/>
+        <circle cx="40" cy="14" r="3" fill="currentColor" stroke="none"/>
+        <path d="M50 14 H78"/>
+        <path d="M36 8 Q40 14 36 20 M44 8 Q40 14 44 20" />
+      </svg>
+    </div>
+  </header>
+
+  <!-- Intro card -->
+  <div class="intro">
+    <span class="hand-tag">bem-vindo!</span>
+    <p>
+      Antes de mais nada — fique à vontade, o 703 é seu por toda a estadia. Estas linhas existem só pra cuidar bem do apartamento e dos vizinhos.
+    </p>
+  </div>
+
+  <!-- 1. Hóspedes registrados -->
+  <section class="rule">
+    <div class="rule-head">
+      <div class="rule-num">01</div>
+      <h2 class="rule-title">Hóspedes <em>registrados</em></h2>
+    </div>
+    <div class="rule-body">
+      <p>Para segurança de todos, apenas os hóspedes informados na reserva poderão acessar o apartamento.</p>
+      <ul>
+        <li><strong>Capacidade máxima:</strong> 8 hóspedes</li>
+        <li>O condomínio poderá solicitar documento de identificação na entrada</li>
+        <li>Visitantes precisam ser combinados previamente</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 2. Festas e eventos -->
+  <section class="rule">
+    <div class="rule-head">
+      <div class="rule-num">02</div>
+      <h2 class="rule-title">Festas e <em>eventos</em></h2>
+    </div>
+    <div class="rule-body">
+      <p>Queremos que você curta bastante, mas o apartamento fica em um condomínio residencial.</p>
+      <p>Por isso, <strong>não são permitidas</strong> festas, eventos, confraternizações grandes, despedidas de solteiro(a) ou atividades comerciais dentro do apartamento.</p>
+      <div class="callout pink">
+        Barulho excessivo ou reclamações do condomínio poderão resultar no encerramento da hospedagem sem reembolso.
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Horário de silêncio -->
+  <section class="rule">
+    <div class="rule-head">
+      <div class="rule-num">03</div>
+      <h2 class="rule-title">Horário de <em>silêncio</em></h2>
+    </div>
+    <div class="rule-body">
+      <p>Pedimos atenção especial entre:</p>
+      <div class="callout">22h e 8h</div>
+      <p>Nesse horário, evite música alta, gritos, caixas de som na varanda e barulho nos corredores.</p>
+    </div>
+  </section>
+
+  <!-- 4. Fumo -->
+  <section class="rule">
+    <div class="rule-head">
+      <div class="rule-num">04</div>
+      <h2 class="rule-title">Fumo</h2>
+    </div>
+    <div class="rule-body">
+      <p>Não é permitido fumar ou vaporizar dentro do apartamento.</p>
+      <p>Caso fique odor de fumaça ou haja dano relacionado ao uso de cigarro ou vape, poderá ser cobrada uma <em>taxa adicional de limpeza</em>.</p>
+    </div>
+  </section>
+
+  <!-- 5. Praia, areia e toalhas -->
+  <section class="rule">
+    <div class="rule-head">
+      <div class="rule-num">05</div>
+      <h2 class="rule-title">Praia, areia <em>e toalhas</em></h2>
+    </div>
+    <div class="rule-body">
+      <p>Você está em frente à praia — aproveite muito!</p>
+      <p>Para manter o apartamento confortável para todos:</p>
+      <ul>
+        <li>Use o chuveiro do acesso à praia para tirar o excesso de areia antes de subir</li>
+        <li>Evite entrar no apartamento com muita areia</li>
+        <li>Não coloque toalhas ou roupas molhadas sobre camas, sofás ou móveis</li>
+        <li>Evite jogar areia nos ralos e chuveiros</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 6. Ar-condicionado e energia -->
+  <section class="rule">
+    <div class="rule-head">
+      <div class="rule-num">06</div>
+      <h2 class="rule-title">Ar-condicionado <em>e energia</em></h2>
+    </div>
+    <div class="rule-body">
+      <p>O Rio é quente, e o ar-condicionado ajuda bastante. Só pedimos estes cuidados:</p>
+      <ul>
+        <li>Desligue os aparelhos ao sair</li>
+        <li>Mantenha portas e janelas fechadas com o ar ligado</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 7. Animais de estimação -->
+  <section class="rule">
+    <div class="rule-head">
+      <div class="rule-num">07</div>
+      <h2 class="rule-title">Animais de <em>estimação</em></h2>
+    </div>
+    <div class="rule-body">
+      <p>Pets são bem-vindos, mas somente com <strong>autorização prévia</strong>.</p>
+    </div>
+  </section>
+
+  <!-- 8. Danos e manutenção -->
+  <section class="rule">
+    <div class="rule-head">
+      <div class="rule-num">08</div>
+      <h2 class="rule-title">Danos e <em>manutenção</em></h2>
+    </div>
+    <div class="rule-body">
+      <p>Se algo quebrar ou não estiver funcionando bem, <strong>avise assim que perceber</strong>.</p>
+      <p>Problemas acontecem. O mais importante é sabermos rápido para resolver da melhor forma. Danos além do uso normal poderão ser cobrados.</p>
+    </div>
+  </section>
+
+  <!-- 9. Atividades proibidas -->
+  <section class="rule">
+    <div class="rule-head">
+      <div class="rule-num">09</div>
+      <h2 class="rule-title">Atividades <em>proibidas</em></h2>
+    </div>
+    <div class="rule-body">
+      <p>Para segurança de todos, são proibidas atividades ilegais, incluindo:</p>
+      <ul>
+        <li>Uso de drogas ilícitas</li>
+        <li>Atividades comerciais não autorizadas</li>
+        <li>Comportamentos que coloquem em risco hóspedes, vizinhos ou funcionários</li>
+      </ul>
+      <p>Essas situações poderão resultar no cancelamento imediato da hospedagem e comunicação à administração ou autoridades.</p>
+    </div>
+  </section>
+
+  <!-- 10. Check-in e check-out -->
+  <section class="rule">
+    <div class="rule-head">
+      <div class="rule-num">10</div>
+      <h2 class="rule-title">Check-in <em>e check-out</em></h2>
+    </div>
+    <div class="rule-body">
+      <div class="hours-row">
+        <div class="hour-card">
+          <div class="lbl">Check-in</div>
+          <div class="val">15h <small>em diante</small></div>
+        </div>
+        <div class="hour-card">
+          <div class="lbl">Check-out</div>
+          <div class="val">11h <small>até</small></div>
+        </div>
+      </div>
+      <p>Late check-out pode ser possível, dependendo da disponibilidade — basta nos perguntar.</p>
+    </div>
+  </section>
+
+  <!-- 11. Fechadura eletrônica -->
+  <section class="rule">
+    <div class="rule-head">
+      <div class="rule-num">11</div>
+      <h2 class="rule-title">Fechadura <em>eletrônica</em></h2>
+    </div>
+    <div class="rule-body">
+      <p>A fechadura do apartamento é eletrônica, para deixar sua chegada mais prática e segura.</p>
+      <p>Você receberá um <strong>código exclusivo de acesso 48 horas antes do check-in</strong>. Esse código será válido apenas para o período da sua estadia.</p>
+      <p>Ao chegar ao condomínio, passe primeiro pela portaria para fazer o check-in. A equipe poderá solicitar documento de identificação e confirmar os dados da reserva.</p>
+      <div class="callout">
+        Depois do check-in na portaria, é só seguir até o apartamento, digitar seu código na fechadura e pronto — sem chave, sem complicação, direto para começar a aproveitar o Rio. 🌴
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. Antes de sair -->
+  <section class="rule">
+    <div class="rule-head">
+      <div class="rule-num">12</div>
+      <h2 class="rule-title">Antes <em>de sair</em></h2>
+    </div>
+    <div class="rule-body">
+      <p>Ao final da estadia, pedimos que você:</p>
+      <ul>
+        <li>Desligue ar-condicionado e luzes</li>
+        <li>Lave a louça utilizada</li>
+        <li>Retire o lixo conforme orientação do condomínio</li>
+        <li>Feche portas e janelas</li>
+        <li>Confira se não esqueceu nada</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 13. Áreas comuns -->
+  <section class="rule">
+    <div class="rule-head">
+      <div class="rule-num">13</div>
+      <h2 class="rule-title">Áreas <em>comuns</em></h2>
+    </div>
+    <div class="rule-body">
+      <p>Ao usar piscina, academia, sauna, quadras e demais áreas do condomínio, siga as regras internas. Algumas valem para todas as áreas:</p>
+      <ul>
+        <li>Use traje adequado nas áreas comuns</li>
+        <li>Não use vidro na piscina</li>
+        <li>Evite música alta nas áreas compartilhadas</li>
+        <li>Crianças devem estar acompanhadas</li>
+        <li>Respeite os horários da piscina, academia, sauna e quadras</li>
+        <li>Não circule molhado nos elevadores ou no lobby</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 14. Respeito aos moradores -->
+  <section class="rule">
+    <div class="rule-head">
+      <div class="rule-num">14</div>
+      <h2 class="rule-title">Respeito aos <em>moradores</em></h2>
+    </div>
+    <div class="rule-body">
+      <p>Este é um condomínio residencial, com famílias e moradores permanentes.</p>
+      <div class="callout mustard">
+        Com gentileza, bom senso e respeito às regras, todo mundo aproveita melhor.
+      </div>
+    </div>
+  </section>
+
+  <!-- Help card -->
+  <section class="help">
+    <span class="help-eyebrow">precisa de ajuda?</span>
+    <h2>A gente está <em>aqui pra você</em>.</h2>
+    <p>Se precisar de qualquer coisa durante sua estadia, entre em contato conosco. Costumamos responder em até 1h.</p>
+    <div class="help-actions" style="line-height: 1.65; height: 50px">
+      <a class="btn wa" href="https://wa.me/14756197149" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A10.9 10.9 0 0012.1 0C5.9 0 .9 5 .9 11.2c0 2 .5 3.9 1.5 5.6L0 24l7.4-2.4a11 11 0 004.7 1.2c6.2 0 11.2-5 11.2-11.2 0-3-1.2-5.8-3.3-8.1z"/></svg>
+        WhatsApp
+      </a>
+      <a class="btn cream-outline" href="/cdn-cgi/l/email-protection#7a0d190a1f1302150e153a171f54191517">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        E-mail
+      </a>
+    </div>
+    <p class="help-final" style="padding: 20px 0px 0px">Queremos que você tenha uma experiência incrível no Rio — com conforto, praia, segurança e boas memórias. ☀</p>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>© 2026 · Apto 703 · Rio Hotel Residence · Feito com <span class="heart">♥</span> no Rio</p>
+  </div>
+</footer>
+
+<!-- Install prompt (mobile) -->
+<div class="install" id="install-banner" role="dialog">
+  <div class="install-ic">703</div>
+  <div class="install-text">
+    <div class="t1">Salvar na tela inicial</div>
+    <div class="t2">Acesse o manual a qualquer momento</div>
+  </div>
+  <button class="install-close" id="install-close" aria-label="Fechar">×</button>
+</div>
+
+<!-- iOS install instructions modal -->
+<div class="modal-overlay" id="ios-modal" role="dialog">
+  <div class="modal">
+    <h3>Adicionar à <em style="font-style:italic;color:var(--pink);">tela inicial</em></h3>
+    <p>Tenha o manual sempre à mão, no seu celular.</p>
+    <div class="steps">
+      <div class="step"><b>1</b><div>Toque no botão de compartilhar <svg class="share-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 16V4M8 8l4-4 4 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></svg> na barra inferior do Safari.</div></div>
+      <div class="step"><b>2</b><div>Role e toque em <strong>"Adicionar à Tela de Início"</strong>.</div></div>
+      <div class="step"><b>3</b><div>Confirme em <strong>"Adicionar"</strong>. O manual aparece como app na tela do seu iPhone.</div></div>
+    </div>
+    <button class="modal-close" id="ios-modal-close">Entendi</button>
+  </div>
+</div>
+
+<!-- Tweaks panel -->
+<div id="tweaks">
+  <div class="tw-head">
+    <span class="ttl">Tweaks</span>
+    <button id="tw-close" aria-label="Fechar">×</button>
+  </div>
+  <div class="tw-body">
+    <div class="tw-sec"><div class="lbl">Paleta</div><div class="palettes" id="palettes"></div></div>
+  </div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+    "palette": 3
+  }/*EDITMODE-END*/;
+  let tw = { ...TWEAK_DEFAULTS };
+
+  const PALETTES = [
+    { name: 'Tropical Farm', cream: '#f4ecdb', creamDeep: '#ebe1cb', paper: '#fbf6ea',
+      pink: '#e85c8a', pinkDeep: '#c4426d', pinkSoft: '#f8cfd9', pinkBlush: '#fae6ec',
+      leaf: '#2c5e3f', leafSoft: '#cfd9bd', leafPale: '#e8edd9',
+      mustard: '#d99a2b', mustardSoft: '#f4dba1', mustardDeep: '#b87d18', ink: '#2a1a14',
+      preview: ['#e85c8a', '#2c5e3f', '#d99a2b'] },
+    { name: 'Coral Jungle', cream: '#fcf2e8', creamDeep: '#f5e4d0', paper: '#fff9ef',
+      pink: '#ff6b4a', pinkDeep: '#d94c2e', pinkSoft: '#fdcbb8', pinkBlush: '#ffe4d9',
+      leaf: '#1f5648', leafSoft: '#c5dbcd', leafPale: '#e3eee5',
+      mustard: '#e9b04c', mustardSoft: '#f8e4b0', mustardDeep: '#c48c1a', ink: '#241814',
+      preview: ['#ff6b4a', '#1f5648', '#e9b04c'] },
+    { name: 'Oceano Profundo', cream: '#f1ecdc', creamDeep: '#e6dcc2', paper: '#faf5e6',
+      pink: '#2a7ab8', pinkDeep: '#1c5a8c', pinkSoft: '#bfd6e8', pinkBlush: '#dde9f1',
+      leaf: '#5a8332', leafSoft: '#d8e5b4', leafPale: '#eef4dc',
+      mustard: '#e2c945', mustardSoft: '#f5e995', mustardDeep: '#b39a18', ink: '#1a2b3d',
+      preview: ['#2a7ab8', '#5a8332', '#e2c945'] },
+    { name: 'Mar & Sol', cream: '#f2ecdb', creamDeep: '#e8dec3', paper: '#faf5e4',
+      pink: '#1ea38f', pinkDeep: '#157a6a', pinkSoft: '#b8e0d6', pinkBlush: '#dceee9',
+      leaf: '#0d3a52', leafSoft: '#c2d6e0', leafPale: '#e0e9ee',
+      mustard: '#e8b550', mustardSoft: '#f4dca4', mustardDeep: '#b8851a', ink: '#0a2438',
+      preview: ['#1ea38f', '#0d3a52', '#e8b550'] }
+  ];
+
+  function applyTweaks() {
+    const p = PALETTES[tw.palette];
+    const r = document.documentElement.style;
+    r.setProperty('--cream', p.cream);
+    r.setProperty('--cream-deep', p.creamDeep);
+    r.setProperty('--paper', p.paper);
+    r.setProperty('--pink', p.pink);
+    r.setProperty('--pink-deep', p.pinkDeep);
+    r.setProperty('--pink-soft', p.pinkSoft);
+    r.setProperty('--pink-blush', p.pinkBlush);
+    r.setProperty('--leaf', p.leaf);
+    r.setProperty('--leaf-soft', p.leafSoft);
+    r.setProperty('--leaf-pale', p.leafPale);
+    r.setProperty('--mustard', p.mustard);
+    r.setProperty('--mustard-soft', p.mustardSoft);
+    r.setProperty('--mustard-deep', p.mustardDeep);
+    r.setProperty('--ink', p.ink);
+    const tc = document.querySelector('meta[name="theme-color"]');
+    if (tc) tc.setAttribute('content', p.cream);
+    document.querySelectorAll('#palettes .pal-opt').forEach((el, i) => el.classList.toggle('active', i === tw.palette));
+  }
+
+  function setTweak(patch) {
+    Object.assign(tw, patch);
+    applyTweaks();
+    try { window.parent.postMessage({ type: '__edit_mode_set_keys', edits: patch }, '*'); } catch(e) {}
+  }
+
+  (function buildUI(){
+    const pl = document.getElementById('palettes');
+    PALETTES.forEach((p, i) => {
+      const b = document.createElement('button');
+      b.className = 'pal-opt';
+      b.innerHTML = `<div class="nm">${p.name}</div><div class="sw">${p.preview.map(c => `<span style="background:${c}"></span>`).join('')}</div>`;
+      b.onclick = () => setTweak({ palette: i });
+      pl.appendChild(b);
+    });
+    applyTweaks();
+  })();
+
+  const tweaksPanel = document.getElementById('tweaks');
+  window.addEventListener('message', (e) => {
+    const t = e.data && e.data.type;
+    if (t === '__activate_edit_mode') tweaksPanel.classList.add('on');
+    else if (t === '__deactivate_edit_mode') tweaksPanel.classList.remove('on');
+  });
+  document.getElementById('tw-close').onclick = () => {
+    tweaksPanel.classList.remove('on');
+    try { window.parent.postMessage({ type: '__edit_mode_dismissed' }, '*'); } catch(e) {}
+  };
+  try { window.parent.postMessage({ type: '__edit_mode_available' }, '*'); } catch(e) {}
+</script>
+
+<script>
+  // ── Print
+  document.getElementById('print-btn').onclick = () => window.print();
+
+  // ── Bookmark / Install handler
+  const bookmarkBtn = document.getElementById('bookmark-btn');
+  const iosModal = document.getElementById('ios-modal');
+  const iosModalClose = document.getElementById('ios-modal-close');
+  const installBanner = document.getElementById('install-banner');
+  const installClose = document.getElementById('install-close');
+
+  let deferredPrompt = null;
+
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+  const dismissed = localStorage.getItem('apto703-install-dismissed') === '1';
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    if (!isStandalone && !dismissed && window.innerWidth <= 760) {
+      setTimeout(() => installBanner.classList.add('on'), 1200);
+    }
+  });
+
+  // Show iOS banner if applicable
+  if (isIOS && !isStandalone && !dismissed && window.innerWidth <= 760) {
+    setTimeout(() => installBanner.classList.add('on'), 1500);
+  }
+
+  installBanner.addEventListener('click', (e) => {
+    if (e.target === installClose) return;
+    showInstall();
+  });
+  installClose.onclick = (e) => {
+    e.stopPropagation();
+    installBanner.classList.remove('on');
+    localStorage.setItem('apto703-install-dismissed', '1');
+  };
+
+  bookmarkBtn.onclick = () => showInstall();
+
+  function showInstall() {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.finally(() => { deferredPrompt = null; installBanner.classList.remove('on'); });
+    } else if (isIOS) {
+      iosModal.classList.add('on');
+      installBanner.classList.remove('on');
+    } else {
+      // Desktop: just show the iOS-style instructions card but with generic copy
+      iosModal.querySelector('h3').innerHTML = 'Salvar como <em style="font-style:italic;color:var(--pink);">bookmark</em>';
+      iosModal.querySelector('p').textContent = 'Use o atalho do seu navegador para guardar esta página.';
+      iosModal.querySelector('.steps').innerHTML =
+        '<div class="step"><b>1</b><div>Pressione <strong>Ctrl + D</strong> (Windows) ou <strong>⌘ + D</strong> (Mac).</div></div>' +
+        '<div class="step"><b>2</b><div>Escolha a pasta de favoritos e confirme.</div></div>';
+      iosModal.classList.add('on');
+    }
+  }
+
+  iosModalClose.onclick = () => iosModal.classList.remove('on');
+  iosModal.addEventListener('click', (e) => { if (e.target === iosModal) iosModal.classList.remove('on'); });
+</script>
+
+</body>
+</html>
